@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	id := goid.ID()
+    id := goid.ID()
     fmt.Println("ID: ", id)
     // ID:  824633721216
 }
