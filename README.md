@@ -19,7 +19,7 @@ func main() {
     fmt.Println("uniqID: ", uniqID)
 
     // get current goroutine id
-    goID := goid.ID()
+    goID := goid.GoID()
     fmt.Println("goID: ", goID)
 }
 ```
