@@ -11,7 +11,7 @@ func TestGoID(t *testing.T) {
 	}
 }
 func TestGoIDSlow(t *testing.T) {
-	id := IDSlow()
+	id := GoID()
 	if id == 0 {
 		t.Fatalf("get slow id failed")
 	}
@@ -30,8 +30,7 @@ func BenchmarkGoIDSlow(b *testing.B) {
 	b.ReportAllocs()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
-			IDSlow()
+			GoID()
 		}
 	})
-
 }
