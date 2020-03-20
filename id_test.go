@@ -4,20 +4,20 @@ import (
 	"testing"
 )
 
-func TestGoID(t *testing.T) {
+func TestID(t *testing.T) {
 	id := ID()
 	if id == 0 {
 		t.Fatalf("get goroutine id failed")
 	}
 }
-func TestGoIDSlow(t *testing.T) {
+func TestGoID(t *testing.T) {
 	id := GoID()
 	if id == 0 {
 		t.Fatalf("get slow id failed")
 	}
 
 }
-func BenchmarkGoID(b *testing.B) {
+func BenchmarkID(b *testing.B) {
 	b.ReportAllocs()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
@@ -26,7 +26,7 @@ func BenchmarkGoID(b *testing.B) {
 	})
 
 }
-func BenchmarkGoIDSlow(b *testing.B) {
+func BenchmarkGoID(b *testing.B) {
 	b.ReportAllocs()
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() {
